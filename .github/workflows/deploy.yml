@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image & Deploy to Azure
-      run: docker build . --file Dockerfile --tag ashenDiz/translator
+      run: docker build . --file Dockerfile --tag ashendiz/translator
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
@@ -22,4 +22,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Image to Docker Hub
-      run: docker push ashenDiz/translator
+      run: docker push ashendiz/translator
